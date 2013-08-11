@@ -109,8 +109,9 @@ $(document).ready(function() {
 		
 		// Loading the reference image
 		var urlReference = 'novimgcrop::imageReference::'+currentAttributeID+'::'+currentAttributeVersion+'::'+currentObjectID+'?'+(new Date()).getTime();
-		divReference.ez(urlReference, {}, null, function() {
-				
+		$.ez(urlReference, {http_accept:"json"}, function(data) {
+            
+            divReference.html(data.content);
 			dialogLoader.hide();
 			imageReference = divReference.find('img:first');
 			
@@ -149,11 +150,13 @@ $(document).ready(function() {
 			'x': getCropValue('x'),
 			'y': getCropValue('y'),
 			'w': getCropValue('w'),
-			'h': getCropValue('h')
+			'h': getCropValue('h'),
+            'http_accept': "json"
 		};
 		
 		dialogLoader.show();
-		divPreview.ez(urlPreview, params, null, function() {
+		$.ez(urlPreview, params, function(data) {
+            divPreview.html(data.content);
 			dialogLoader.hide();
 			divReferenceArea.hide();
 			divPreviewArea.show();
@@ -240,7 +243,9 @@ function deleteTmpImage() {
 
 function refreshImageDetails(attributeId, contentObjectVersion, contentObjectId) {
 	var url = 'novimgcrop::refreshImage::'+attributeId+'::'+contentObjectVersion+'::'+contentObjectId+'?'+(new Date()).getTime();
-	$('#imageinfos_'+attributeId).ez(url);
+	$.ez(url,{'http_accept': "json"},function(data){
+        $('#imageinfos_'+attributeId).html(data.content);
+    });
 	
 	var buttonCrop = $('#novimagecroptrigger_'+attributeId+'_'+contentObjectVersion+'_'+contentObjectId); 
 	buttonCrop.removeClass('button-deleted');

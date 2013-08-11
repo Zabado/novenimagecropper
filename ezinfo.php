@@ -1,6 +1,6 @@
 <?php
 // SOFTWARE NAME: Noven Image Cropper
-// SOFTWARE RELEASE: 1.1.1
+// SOFTWARE RELEASE: 1.1.2
 // COPYRIGHT NOTICE: Copyright (C) 1999-2009 Noven
 // SOFTWARE LICENSE: GNU General Public License v2.0
 // NOTICE: >
@@ -23,13 +23,13 @@ class novenimagecropperInfo
     static function info()
     {
         return array( 'Name' => '<a href="http://projects.ez.no/novenimagecropper" target="_blank">Noven Image Cropper</a>',
-                      'Version' => "1.1.1",
+                      'Version' => "1.1.2",
         			  'Author'	=> 'Jérôme Vieilledent',
                       'Copyright' => "Copyright © 2009 NOVEN",
                       'License' => "GNU General Public License v2.0",
-                      'Includes the following libraries'              => array( 'jQuery' => 'v1.4.2 http://jquery.com',
-                                                                              'jQuery UI' => 'v1.8 http://jqueryui.com',
-                                                                              'jCrop' => 'v0.9.8 http://deepliquid.com/content/Jcrop.html',
+                      'Includes the following libraries'              => array( 'jQuery' => 'v1.9.1 http://jquery.com',
+                                                                              'jQuery UI' => 'v1.10.3 http://jqueryui.com',
+                                                                              'jCrop' => 'v0.9.12 http://deepliquid.com/content/Jcrop.html',
                                                                               'Ajax Upload' => 'v3.9 http://valums.com/ajax-upload/',
                                                                               'eZ Components' => 'http://ezcomponents.org/')
                       );

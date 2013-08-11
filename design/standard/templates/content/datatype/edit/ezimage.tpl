@@ -1,5 +1,5 @@
 {ezcss_require( array( 'novenimagecropper.css', 'jquery-ui-novenimagecropper.css', 'jquery.Jcrop.css' ) )}
-{ezscript_require( array( 'ezjsc::jquery', 'ezjsc::jqueryio', 'jquery-ui-novenimagecropper.min.js', 'jquery.Jcrop.min.js', 'ajaxupload.js', 'novenimagecropper.js' ) )}
+{ezscript_require( array( 'ezjsc::jquery', 'ezjsc::jqueryio', 'jquery-ui-novenimagecropper.js', 'jquery.Jcrop.js', 'ajaxupload.js', 'novenimagecropper.js' ) )}
 
 {default attribute_base='ContentObjectAttribute'}
 {let attribute_content=$attribute.content}
