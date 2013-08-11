@@ -1,0 +1,64 @@
+Noven Image Cropper
+2009 Jerome Vieilledent - Noven
+
+1.1.1
+------------------
+* Added Norwegian translation (thanks HŒvard Bergersen for your contribution !)
+* Fixed issue with uppercase image file extensions
+
+1.1.0
+------------------
+* Upgraded jQuery (1.4.2) and jQuery UI (1.8)
+* Upgraded AjaxUpload (3.9)
+* Fixed a small compatibility bug with eZJSCore 1.1 (thanks Sebastien Morel)
+* Now uses ezpI18n::tr() and eZTemplate::factory(), introduced in eZ Publish 4.3 (backwards compatibility is maintained)
+
+1.0.6
+------------------
+* Added german translation (thanks Marco Zinn for your contribution !)
+* Updated french translation and untranslated file with right doctype
+* Fixed issue with ezcImageConverterSettings if ImageMagick is not present in the system. Now takes into account settings from image.ini
+* Fixed PHP warning in modules/novimagecrop/upload.php. Image content attribute was not passed to eZContentObjectAttribute::store() method
+* Added new aspect ratios
+* Updated doc about "reference" image filter that must be declared in image.ini (not by default in ezwebin frontend siteaccess)
+
+1.0.5
+------------------
+* Fixed potential problems with params for ezcImageFilter. Must be int
+* Deleted obsolete view scripts for the module 'novimagecrop'
+
+1.0.4
+------------------
+* Fixed "Extension allways uses reference alias of the image"
+* Fixed issue when uploading an image and no previous image was registered in object => "Crop" button was still disabled
+
+1.0.3
+------------------
+* Added possibility to "force" crop width/height selection for an aspect ratio
+* Fixed bug when closing dialog : aspect ratio select box doesn't reset
+
+1.0.2
+------------------
+* Callback function updateImage() now sends a jQuery event when update is finished
+* Add JSDoc on updateImage() function
+* Add PHPDoc on NovImgCropServerFunctions::updateImageByPath() server function
+* Updated doc
+
+1.0.1
+------------------
+* Fixed problem with server callback function NovImgCropServerFunctions::updateImageByPath()
+
+1.0
+------------------
+* Fixed problems with eZFS/eZFS2
+* Added a JS callback function - updateImage() - to allow you to update your image attribute from an external element (another attribute for example)
+
+1.0 RC1
+------------------
+* Global refactoring to use ezjscore (http://projects.ez.no/ezjscore)
+* Added dependency on ezjscore extension
+* Fixed problems with different access modes used by eZ Publish (VHost, URI, index.php...)
+
+1.0 beta 1
+------------------
+Initial beta release
